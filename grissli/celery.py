@@ -1,9 +1,11 @@
 from __future__ import absolute_import
 from django.conf import settings
 
-import os
-
 from celery import Celery
+import os
+import djcelery
+djcelery.setup_loader()
+
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'grissli.settings')
 
