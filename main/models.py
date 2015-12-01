@@ -5,7 +5,7 @@ class Url(models.Model):
     url = models.URLField(unique=True)
     minute = models.PositiveIntegerField(default=0)
     second = models.PositiveIntegerField(default=0)
-    datetime = models.DateTimeField(blank=True, null=True)
+    datetime = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):
         return self.url
